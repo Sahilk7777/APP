@@ -20,9 +20,13 @@ class LoginController extends GetxController {
   Future<void> signInWithGoogle() async {
     isGoogleLoading.value = true;
     try {
+      // final GoogleSignIn googleSignIn = GoogleSignIn(
+      //   serverClientId:
+      //       '1022798183394-tq8i6uqjn86e4l6df8ebp7pudgrefb18.apps.googleusercontent.com',
+      // );
       final GoogleSignIn googleSignIn = GoogleSignIn(
         serverClientId:
-            '1022798183394-tq8i6uqjn86e4l6df8ebp7pudgrefb18.apps.googleusercontent.com',
+            '53952141956-c1b0cdberou7lu205819g083vk5mj83s.apps.googleusercontent.com',
       );
       final googleUser = await googleSignIn.signIn();
       if (googleUser == null) {
